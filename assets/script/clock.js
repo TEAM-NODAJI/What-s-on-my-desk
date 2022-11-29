@@ -15,7 +15,7 @@ function getTime() {
   const nowMinute = date.getMinutes();
   const nowSecond = date.getSeconds();
 
-  console.log(nowHour, nowMinute, nowSecond)
+  // console.log(nowHour, nowMinute, nowSecond)
   tabletClock.textContent = `${nowHour} : ${nowMinute} : ${nowSecond}`;
   requestAnimationFrame(getTime);
 }
@@ -23,4 +23,4 @@ function getTime() {
 function liveClock() {
   requestAnimationFrame(getTime);
 }
-liveClock()
+liveClock();
