@@ -9,10 +9,17 @@ https://skinny-lemonade-7ab.notion.site/TEAM-NODAJI-4f3e39c67f7b48d6bc9dee509dd2
 :card_file_box: 
 
 [change] : 기능 수정
+<br>
 :label: - 마크업 수정
+<br>
 :art: - CSS 수정
+<br>
 :wrench: - JS 수정
+<br>
 :memo: ReadMe수정
 
 [bug] : 버그 수정완료
 :poop:
+
+## 피그마 링크
+https://www.figma.com/file/sXI3YdA7F6LQWSOvL3VsCn/TEAM-NODAJI-team-library?node-id=0%3A1&t=kU80iEz8VOI9bCdP-1
