@@ -8,80 +8,77 @@
 const calculator = document.querySelector(".calculator");
 const screenCalc = document.querySelector("#screenCalc");
 const buttons = calculator.querySelectorAll(".calculator button");
-console.log(buttons);
+// console.log(buttons);
 
 // 계산기 화면의 기본값
 let inputTemp = "";
 let num1;
 let num2;
 let operator;
-// 화면에 숫자를 표시해주는 기능
+
+// 버튼을 클릭했을 때
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     let btnValue = e.currentTarget.textContent;
     // console.log(e.currentTarget.textContent)
 
-    if (!isNaN(parseInt(btnValue))) {
+    if (!Number.isNaN(parseInt(btnValue))) {
       inputTemp += btnValue;
-      screenCalc.value = inputTemp;
+      screenCalc.value = +inputTemp;
       console.log(screenCalc.value) 
-    } else if (inputTemp && screenCalc.value){
+    } else if (num1){  // 조건에 num1에 값이 있을 때로 변경
       inputTemp += btnValue;
       num2 = parseInt(inputTemp);
-      console.log(`num2 : ${num2}`);
+      screenCalc.value = "";
+      // console.log(`num2 : ${num2}`);
     }
     
     if (button.dataset.type === "operator" && screenCalc.value) {
       num1 = parseInt(inputTemp);
       inputTemp = "";
-      screenCalc.value = "";
-      operator = button.textContent
-      console.log(`num1 : ${num1}`);
-        // num1 += num2;
+      operator = btnValue;
+      // console.log(`num1 : ${num1}`);
     }
     
-    if(button.dataset.type === "equal")
+    if(button.dataset.type === "equal") {
       result(num1, operator, num2);
+      screenCalc.value = inputTemp;
       // clear();
+    }
+
+    if(button.dataset.type === "reset") {
+      clear();
+    }
   });
 });
-  
+
 function result(num1, operator, num2) {
-    if (operator === "+"){
-      console.log(num1 + num2);
-    }
-    if (operator === "-"){
-      console.log('빼기임');
-    }
-    if (operator === "×"){
-      console.log('곱하기');
-    }
-    if (operator === "÷"){
-      console.log('나누기');
-    }
+  let calcValue;
+  if (operator === "+"){
+    calcValue = num1 + num2;
+    console.log(num1 + num2);
+  }
+  if (operator === "-"){
+    calcValue = num1 - num2;
+    console.log(num1 - num2);
+  }
+  if (operator === "×"){
+    calcValue = num1 * num2;
+    console.log(num1 * num2);
+  }
+  if (operator === "÷"){
+    calcValue = num1 / num2;
+    console.log(num1 / num2);
+  }
+  inputTemp = calcValue
+  return calcValue
 }
 
-// function clear(){
-//   num1 = "";
-//   num2 = "";
-//   operator = "";
-//   inputTemp = "";
-// }
-
-// function result(buttons) {
-//   if (buttons.dataset.type === "operator") {
-//     if (buttons.textContent === "+"){
-//       console.log('더하기임');
-//     }
-//     if (buttons.textContent === "-"){
-//       console.log('빼기임');
-//     }
-//     if (buttons.textContent === "×"){
-//       console.log('곱하기');
-//     }
-//     if (buttons.textContent === "÷"){
-//       console.log('나누기');
-//     }
-//   }
-// }
+function clear(){
+  num1 = 0;
+  num2 = 0;
+  inputTemp = 0;
+  screenCalc.value = 0;
+  // inputTemp = "";
+}
 

@@ -7,46 +7,43 @@
   <title>What's on my desk</title>
 </head>
 <body>
-  <div class="date-tablet"></div>
-  <div class="clock-tablet"></div>
+  <div class="tablet">
+    <div class="date-tablet"></div>
+    <div class="clock-tablet"></div>
+  </div>
 
   <div class="calculator">
-    <label for="screenCalc">0</label>
-    <input type="number" id="screenCalc" readonly>
+    <label for="screenCalc"></label>
+    <input type="number" id="screenCalc" value="0" readonly>
     <div>
-      <button type="button">AC</button>
+      <button type="button" data-type="reset">AC</button>
       <button type="button">%</button>
       <button type="button">DEL</button>
       <button type="button" data-type="operator">&divide;</button>
     </div>
-    
     <div>
       <button type="button">7</button>
       <button type="button">8</button>
       <button type="button">9</button>
       <button type="button" data-type="operator">&times;</button>
     </div>
-    
     <div>
       <button type="button">4</button>
       <button type="button">5</button>
       <button type="button">6</button>
       <button type="button" data-type="operator">-</button>
     </div>
-
     <div>
       <button type="button">1</button>
       <button type="button">2</button>
       <button type="button">3</button>
       <button type="button" data-type="operator">+</button>
     </div>
-
     <div>
       <button type="button">0</button>
       <button type="button" data-type="equal">=</button>
       <button type="button">.</button>
     </div>
-    
   </div>
 
   <script src="./assets/script/clock.js"></script>
