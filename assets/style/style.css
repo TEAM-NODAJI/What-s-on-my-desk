@@ -1,0 +1,32 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* layout */
+
+body {
+  background-color: #E8F7FB;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  height: 100vh;
+}
+
+.img-tablet {
+  display: block;
+  width: 816px;
+  left: 50%;
+  transform: translateX(-60%);
+  position: fixed;
+  bottom: 0;
+} 
