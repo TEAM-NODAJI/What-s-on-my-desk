@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 /* reset */
 * {
   margin: 0;
@@ -18,15 +20,144 @@ body {
 
 .container {
   position: relative;
-  width: 1200px;
+  width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+}
+
+.cont-tablet{
+  position: fixed;
+  width: 816px;
+  left: 50%;
+  bottom: 60%;
+  transform: translateX(-60%);
+  z-index: 10;
+}
+
+.cont-tablet .tit-womd {
+  width: 256px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-16%) translateY(460%);
+  z-index: 30;
+}
+.cont-tablet .tit-womd img{
+  width: 100%;
 }
 
 .img-tablet {
-  display: block;
-  width: 816px;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+}
+
+.date-clock-tablet {
+  position: absolute;
   left: 50%;
-  transform: translateX(-60%);
-  position: fixed;
-  bottom: 0;
-} 
+  top: 150%;
+  transform: translateX(-6%);
+  z-index: 30;
+  text-align: center;
+  font-family: 'pretendard';
+}
+
+.date-clock-tablet .date-tablet {
+  font-size: 18px;
+  letter-spacing: -1.7%;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+.date-clock-tablet .clock-tablet {
+  font-size: 40px;
+  letter-spacing: -1.7%;
+  font-weight: 600;
+}
+
+.cont-what-food {
+  position: relative;
+  left: 70%;
+  top: 50%;
+}
+
+.btn-what-food {
+  width: 170px;
+  position: absolute;
+}
+
+.btn-what-food img {
+  width: 100%;
+  position: absolute;
+  top: 222px;
+  left: 136px;
+}
+
+.img-line-note {
+  width: 400px;
+  position: absolute;
+}
+
+.img-pencil {
+  width: 150px;
+  position: absolute;
+  top: 275px;
+  left: 196px;
+}
+
+.img-diary {
+  width: 700px;
+  position: absolute;
+  top: 500px;
+  left: -70px;
+}
+
+.btn-calc {
+  width: 168px;
+  position: absolute;
+}
+
+.btn-calc img {
+  width: 100%;
+}
+
+.cont-weather {
+  width: 182px;
+  position: absolute;
+}
+
+.cont-weather img {
+  width: 100%;
+}
+
+.img-glasses {
+  width: 280px;
+  position: absolute;
+}
+
+.btn-memo {
+  width: 270px;
+  position: absolute;
+}
+
+.btn-memo img {
+  width: 100%;
+}
+
+.btn-coffee {
+  width: 286px;
+  position: absolute;
+}
+
+.btn-coffee img {
+  width: 100%;
+}
+
+.img-pen{
+  width: 166px;
+  position: absolute;
+}
+
+.img-pot {
+  width: 188px;
+  position: absolute;
+}
