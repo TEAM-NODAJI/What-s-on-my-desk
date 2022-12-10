@@ -7,10 +7,10 @@ function getTime() {
   const nowMonth = date.getMonth() + 1;
   const nowDate = date.getDate();
 
-  const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  const week = ['일', '월', '화', '수', '목', '금', '토'];
   const nowDay = week[date.getDay()];
 
-  tabletDate.textContent = `${nowYear}년 ${nowMonth}월 ${nowDate}일 ${nowDay}`;
+  tabletDate.textContent = `${nowYear}년 ${nowMonth}월 ${nowDate}일 ${nowDay}요일`;
   const nowHour = date.getHours();
   const nowMinute = date.getMinutes();
   const nowSecond = date.getSeconds();
