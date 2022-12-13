@@ -22,15 +22,17 @@ body {
   position: relative;
   width: 100vw;
   min-width: 1250px;
+  max-width: 1440px;
   height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .cont-tablet{
   position: fixed;
-  width: 700px;
-  left: 50%;
-  bottom: 55%;
+  width: 780px;
+  left: 49%;
+  bottom: 53%;
   transform: translateX(-60%);
   z-index: 10;
 }
@@ -89,7 +91,7 @@ body {
 .btn-what-food img {
   width: 100%;
   position: absolute;
-  top: 170px;
+  top: 140px;
   left: 100px;
 }
 
@@ -101,7 +103,7 @@ body {
 .img-pencil {
   width: 150px;
   position: absolute;
-  top: 150px;
+  top: 160px;
   left: 196px;
 }
 
