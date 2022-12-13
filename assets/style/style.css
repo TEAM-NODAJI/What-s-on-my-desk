@@ -21,15 +21,16 @@ body {
 .container {
   position: relative;
   width: 100vw;
+  min-width: 1250px;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .cont-tablet{
   position: fixed;
-  width: 816px;
+  width: 700px;
   left: 50%;
-  bottom: 60%;
+  bottom: 55%;
   transform: translateX(-60%);
   z-index: 10;
 }
@@ -76,8 +77,8 @@ body {
 
 .cont-what-food {
   position: relative;
-  left: 70%;
-  top: 50%;
+  left: 65%;
+  top: 58%;
 }
 
 .btn-what-food {
@@ -88,8 +89,8 @@ body {
 .btn-what-food img {
   width: 100%;
   position: absolute;
-  top: 222px;
-  left: 136px;
+  top: 170px;
+  left: 100px;
 }
 
 .img-line-note {
@@ -100,15 +101,15 @@ body {
 .img-pencil {
   width: 150px;
   position: absolute;
-  top: 275px;
+  top: 150px;
   left: 196px;
 }
 
 .img-diary {
   width: 700px;
   position: absolute;
-  top: 500px;
-  left: -70px;
+  top: 380px;
+  left: -30px;
 }
 
 .btn-calc {
@@ -120,23 +121,18 @@ body {
   width: 100%;
 }
 
-.cont-weather {
-  width: 182px;
-  position: absolute;
-}
-
-.cont-weather img {
-  width: 100%;
-}
-
 .img-glasses {
   width: 280px;
   position: absolute;
+  top: 310px;
+  left: 80px;
 }
 
 .btn-memo {
   width: 270px;
   position: absolute;
+  right: 160px;
+  top: 290px;
 }
 
 .btn-memo img {
@@ -146,18 +142,42 @@ body {
 .btn-coffee {
   width: 286px;
   position: absolute;
+  top: 50px;
+  left: 50px;
 }
 
 .btn-coffee img {
   width: 100%;
 }
 
+.btn-calc {
+  position: absolute;
+  top: 30px;
+  left: 400px;
+}
+
+.cont-weather {
+  position: absolute;
+  width: 182px;
+  top: 42px;
+  right: 450px;
+}
+
+.cont-weather img {
+  width: 100%;
+}
+
 .img-pen{
   width: 166px;
   position: absolute;
+  right: 110px;
+  top: 230px;
+  transform: rotate(-10deg);
 }
 
 .img-pot {
   width: 188px;
   position: absolute;
+  right: 180px;
+  top: 30px;
 }
