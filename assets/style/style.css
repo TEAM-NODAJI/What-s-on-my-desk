@@ -56,24 +56,31 @@ body {
 
 .date-clock-tablet {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+
   left: 50%;
   top: 150%;
   transform: translateX(-6%);
   z-index: 30;
-  text-align: center;
+  text-align: left;
   font-family: 'pretendard';
 }
 
 .date-clock-tablet .date-tablet {
   font-size: 18px;
-  letter-spacing: -1.7%;
+  width: 100%;
   margin-bottom: 6px;
+  padding-left: 15px;
   font-weight: 400;
 }
 
 .date-clock-tablet .clock-tablet {
+  width: 100%;
   font-size: 40px;
-  letter-spacing: -1.7%;
   font-weight: 600;
 }
 
@@ -114,15 +121,6 @@ body {
   left: -30px;
 }
 
-.btn-calc {
-  width: 168px;
-  position: absolute;
-}
-
-.btn-calc img {
-  width: 100%;
-}
-
 .img-glasses {
   width: 280px;
   position: absolute;
@@ -154,14 +152,19 @@ body {
 
 .btn-calc {
   position: absolute;
-  top: 30px;
+  width: 168px;
+  top: 70px;
   left: 400px;
+}
+
+.btn-calc img {
+  width: 100%;
 }
 
 .cont-weather {
   position: absolute;
   width: 182px;
-  top: 42px;
+  top: 102px;
   right: 450px;
 }
 
