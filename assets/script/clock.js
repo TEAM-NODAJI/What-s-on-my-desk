@@ -16,7 +16,10 @@ function getTime() {
   const nowSecond = date.getSeconds();
 
   // console.log(nowHour, nowMinute, nowSecond)
-  tabletClock.textContent = `${nowHour} : ${nowMinute} : ${nowSecond}`;
+  tabletClock.textContent = `
+    ${nowHour < 10 ? `0${nowHour}` : nowHour} 
+    : ${nowMinute < 10 ? `0${nowMinute}` : nowMinute} 
+    : ${nowSecond < 10 ? `0${nowSecond}` : nowSecond}`;
   requestAnimationFrame(getTime);
 }
 
@@ -24,3 +27,8 @@ function liveClock() {
   requestAnimationFrame(getTime);
 }
 liveClock();
+
+
+$inpHour.value = String(hour).padStart(2, "0");
+$inpMinute.value = String(minute).padStart(2, "0");
+$inpSecond.value = String(second).padStart(2, "0");
