@@ -60,9 +60,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: fit-content;
 
-  left: 50%;
+  left: 47%;
   top: 150%;
   transform: translateX(-6%);
   z-index: 30;
@@ -72,14 +72,14 @@ body {
 
 .date-clock-tablet .date-tablet {
   font-size: 18px;
-  width: 100%;
-  margin-bottom: 6px;
-  padding-left: 15px;
+  margin: 6px 20px;
+  text-align: center;
   font-weight: 400;
 }
 
 .date-clock-tablet .clock-tablet {
-  width: 100%;
+  /* width: 100%; */
+  margin: 0 20px;
   font-size: 40px;
   font-weight: 600;
 }
