@@ -29,6 +29,6 @@ function liveClock() {
 liveClock();
 
 
-$inpHour.value = String(hour).padStart(2, "0");
-$inpMinute.value = String(minute).padStart(2, "0");
-$inpSecond.value = String(second).padStart(2, "0");
+// $inpHour.value = String(hour).padStart(2, "0");
+// $inpMinute.value = String(minute).padStart(2, "0");
+// $inpSecond.value = String(second).padStart(2, "0");
