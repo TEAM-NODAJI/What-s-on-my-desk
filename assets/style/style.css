@@ -120,10 +120,10 @@ body {
 }
 
 .img-pencil {
-  width: 150px;
+  width: 175px;
   position: absolute;
-  top: 160px;
-  left: 196px;
+  top: 164px;
+  left: 190px;
 }
 
 .img-diary {
@@ -143,12 +143,20 @@ body {
 .btn-memo {
   width: 270px;
   position: absolute;
-  right: 160px;
-  top: 290px;
+  right: 100px;
+  top: 250px;
 }
 
 .btn-memo img {
   width: 100%;
+}
+
+.img-pen{
+  width: 166px;
+  position: absolute;
+  right: 50px;
+  top: 220px;
+  transform: rotate(-10deg);
 }
 
 .btn-coffee {
@@ -177,19 +185,11 @@ body {
   position: absolute;
   width: 182px;
   top: 102px;
-  right: 450px;
+  right: 430px;
 }
 
 .cont-weather img {
   width: 100%;
-}
-
-.img-pen{
-  width: 166px;
-  position: absolute;
-  right: 110px;
-  top: 230px;
-  transform: rotate(-10deg);
 }
 
 .img-pot {
