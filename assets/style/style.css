@@ -1,12 +1,13 @@
 @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
-  --font: 'Pretendard';
+  --font: "Pretendard";
 }
 
 /* reset */
@@ -28,7 +29,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: var(--font);
-  background-color: #E8F7FB;
+  background-color: #e8f7fb;
 }
 
 .container {
@@ -37,10 +38,9 @@ body {
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  /* background-color: cadetblue; */
 }
 
-.cont-tablet{
+.cont-tablet {
   position: fixed;
   width: 780px;
   height: 556px;
@@ -56,7 +56,7 @@ body {
   left: 350px;
   z-index: 30;
 }
-.cont-tablet .tit-womd img{
+.cont-tablet .tit-womd img {
   width: 100%;
 }
 .img-tablet {
@@ -77,7 +77,7 @@ body {
   bottom: 420px;
   z-index: 30;
   text-align: left;
-  font-family: 'pretendard';
+  font-family: "pretendard";
 }
 .date-clock-tablet .date-tablet {
   font-size: 18px;
@@ -151,7 +151,7 @@ body {
   width: 100%;
 }
 
-.img-pen{
+.img-pen {
   width: 166px;
   position: absolute;
   right: 50px;
@@ -197,4 +197,18 @@ body {
   position: absolute;
   right: 180px;
   top: 30px;
+}
+
+@media screen and (max-height: 750px) {
+  .cont-tablet {
+    bottom: -120px;
+  }
+
+  .btn-calc {
+    top: 40px;
+  }
+
+  .cont-weather {
+    top: 60px;
+  }
 }
