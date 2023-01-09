@@ -1,0 +1,76 @@
+@keyframes rotate {
+  /* 0% {
+    transform: translateY(0);
+  } */
+  /* 25% {
+    transform: translateY(-20%);
+  } */
+  /* 50% {
+    transform: translateY(-80%);
+  } */
+  /* 75% {
+    transform: translateY(-60%);
+  } */
+  100% {
+    transform: translateY(-66.6666%);
+  }
+
+}
+
+/* Modal */
+.modal-wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 40;
+}
+
+#modal {
+  position: relative;
+  top: calc(50vh - 360px);
+  left: calc(50vw - 400px);
+  width: 800px;
+  height: 720px;
+  z-index: 50;
+  border-radius: 40px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+#modal .modal-tit {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.what-food-wrap {
+  font-size: 60px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: 700;
+  overflow: hidden;
+  background-color: antiquewhite;
+  transform: translate3d(0, 0, 0);
+}
+
+.what-food-list {
+  list-style: none;
+  animation: rotate 7s infinite;
+}
+
+.list-item {
+  font-size: inherit;
+}
+
+#modal .btn-choose {
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}

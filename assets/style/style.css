@@ -19,10 +19,10 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-family: var(--font);
 }
 
 /* layout */
-
 body {
   position: relative;
   width: 100vw;
@@ -197,23 +197,4 @@ body {
   position: absolute;
   right: 180px;
   top: 30px;
-}
-
-/* Modal */
-#modal {
-  position: fixed;
-  bottom: calc(50vh / 4);
-  left: calc(50vw / 2);
-  min-width: 800px;
-  min-height: 700px;
-  z-index: 50;
-  border-radius: 40px;
-  border: 5px solid #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  background-color: white;
-}
-
-#modal .modal-tit {
-  text-align: center;
-  margin: 20px 0;
 }
