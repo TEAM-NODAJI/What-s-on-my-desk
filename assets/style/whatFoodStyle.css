@@ -30,11 +30,15 @@
 }
 
 #modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
-  top: calc(50vh - 360px);
+  top: calc(50vh - 250px);
   left: calc(50vw - 400px);
   width: 800px;
-  height: 720px;
+  height: 500px;
   z-index: 50;
   border-radius: 40px;
   border: 5px solid #fff;
@@ -43,24 +47,27 @@
 }
 
 #modal .modal-tit {
+  font-size: 40px;
   text-align: center;
-  margin: 20px 0;
+  margin: 50px 0 50px;
 }
 
 .what-food-wrap {
   font-size: 60px;
+  width: 600px;
   height: 100px;
   line-height: 100px;
   text-align: center;
   font-weight: 700;
   overflow: hidden;
-  background-color: antiquewhite;
+  background-color: #fff8d0;
+  border-radius: 50px;
   transform: translate3d(0, 0, 0);
 }
 
 .what-food-list {
   list-style: none;
-  animation: rotate 7s infinite;
+  animation: rotate 1.5s infinite;
 }
 
 .list-item {
@@ -68,7 +75,12 @@
 }
 
 #modal .btn-choose {
-  font-size: 20px;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin: 50px auto;
+  color: white;
+  border-radius: 50px;
+  background-color: black;
 }
 
 .hidden {
