@@ -1,4 +1,13 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+  --font: 'Pretendard';
+}
 
 /* reset */
 * {
@@ -15,41 +24,44 @@ button {
 /* layout */
 
 body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
   background-color: #E8F7FB;
 }
 
 .container {
   position: relative;
-  width: 100vw;
-  min-width: 1250px;
-  max-width: 1440px;
-  height: 100vh;
+  width: 1250px;
+  min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
+  /* background-color: cadetblue; */
 }
 
 .cont-tablet{
   position: fixed;
   width: 780px;
+  height: 556px;
   left: 49%;
-  bottom: 53%;
+  bottom: -80px;
   transform: translateX(-60%);
   z-index: 10;
 }
-
 .cont-tablet .tit-womd {
   width: 256px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-16%) translateY(460%);
+  position: absolute;
+  top: 200px;
+  left: 350px;
   z-index: 30;
 }
 .cont-tablet .tit-womd img{
   width: 100%;
 }
-
 .img-tablet {
   width: 100%;
+  height: fit-content;
   position: absolute;
   z-index: 20;
 }
@@ -61,22 +73,18 @@ body {
   justify-content: center;
   align-items: center;
   width: fit-content;
-
-  left: 47%;
-  top: 150%;
-  transform: translateX(-6%);
+  left: 46%;
+  bottom: 420px;
   z-index: 30;
   text-align: left;
   font-family: 'pretendard';
 }
-
 .date-clock-tablet .date-tablet {
   font-size: 18px;
   margin: 6px 20px;
   text-align: center;
   font-weight: 400;
 }
-
 .date-clock-tablet .clock-tablet {
   /* width: 100%; */
   margin: 0 20px;
@@ -85,9 +93,13 @@ body {
 }
 
 .cont-what-food {
-  position: relative;
+  width: 400px;
+  position: absolute;
   left: 65%;
-  top: 58%;
+  top: calc(100vh - 50%);
+}
+.cont-what-food .img-line-note {
+  width: 100%;
 }
 
 .btn-what-food {
@@ -185,4 +197,23 @@ body {
   position: absolute;
   right: 180px;
   top: 30px;
+}
+
+/* Modal */
+#modal {
+  position: fixed;
+  bottom: calc(50vh / 4);
+  left: calc(50vw / 2);
+  min-width: 800px;
+  min-height: 700px;
+  z-index: 50;
+  border-radius: 40px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+#modal .modal-tit {
+  text-align: center;
+  margin: 20px 0;
 }
