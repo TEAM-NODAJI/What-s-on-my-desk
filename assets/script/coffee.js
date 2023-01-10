@@ -145,25 +145,40 @@ const menu = [
   },
 ];
 
-const contItems = document.querySelector(".cont-items");
-const contBtns = document.querySelector(".cont-btns");
 
-window.addEventListener("DOMContentLoaded", () => {
+const openMenuModal = document.querySelector(".btn-coffee");
+const coffeeModal = document.querySelector(".coffee-modal-wrap");
+const btnCloseModal = document.querySelector(".off-modal");
+
+const contItems = document.querySelector(".cont-coffee-items");
+const contBtns = document.querySelector(".cont-coffee-btns");
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   setMenuItems(menu);
+//   setMenuBtns();
+// })
+
+openMenuModal.addEventListener("click",() => {
+  coffeeModal.classList.remove("hidden");
   setMenuItems(menu);
   setMenuBtns();
 })
+
+btnCloseModal.addEventListener("click", () => {
+  coffeeModal.classList.add("hidden");
+});
 
 function setMenuItems(menuItems) {
   let setMenu = menuItems.map((item) => {
     return `
     <article class="menu-item">
-      <img src=${item.img} class="img-item" alt=${item.title}>
-      <div class="item-info">
+      <img src=${item.img} class="coffee-img-item" alt=${item.title}>
+      <div class="coffee-item-info">
         <header>
           <h4>${item.title}</h4>
-          <h4 class="price">${item.price}원</h4>
+          <h4 class="coffee-price">${item.price}원</h4>
         </header>
-        <p class="txt-item">
+        <p class="coffee-txt-item">
           ${item.desc}
         </p>
       </div>

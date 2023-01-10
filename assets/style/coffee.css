@@ -1,0 +1,103 @@
+:root {
+  --main-bg-color: #ebe1d9;
+  --base-br-color: #705545;
+  --tit-color: #342921;
+  --sub-gd-color: #cca863;
+}
+
+/* Modal */
+.coffee-modal-wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 40;
+}
+
+.coffee-modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 95%;
+  height: 90%;
+  z-index: 50;
+  padding: 2rem 0;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: var(--main-bg-color);
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+/* .coffee-title {
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0 50px;
+} */
+
+/* font-size */
+.coffee-modal-wrap h2 {
+  font-size: 2rem;
+  /* font-weight: 700; */
+  color : var(--tit-color);
+}
+
+.coffee-modal-wrap h2::after{
+  content: "";
+  width: 5rem;
+  height: 0.3rem;
+  background: var(--sub-gd-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2.4rem;
+}
+
+.coffee-modal-wrap h4 {
+  font-size: 0.875rem;
+}
+
+.coffee-modal-wrap p {
+  margin-bottom: 1.25rem;
+}
+
+.coffee-modal-wrap img {
+  display: block;
+}
+
+.coffee-img-item {
+  object-fit: cover;
+  height: 200px;
+  border: 0.25rem solid var(--base-br-color);
+  border-radius: 0.5rem;
+}
+
+.coffee-item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--base-br-color); /* 컬러 */
+}
+
+.cont-coffee-btns button{
+  text-transform: uppercase;
+  padding: 0.2rem 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.coffee-modal-wrap .off-modal{
+  width: 20px;
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  right: 1.2rem;
+}
+.coffee-modal-wrap .off-modal img {
+  width: 100%;
+}
