@@ -1,4 +1,14 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font: "Pretendard";
+}
 
 /* reset */
 * {
@@ -10,46 +20,48 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-family: var(--font);
 }
 
 /* layout */
-
 body {
-  background-color: #E8F7FB;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+  background-color: #e8f7fb;
 }
 
 .container {
   position: relative;
-  width: 100vw;
-  min-width: 1250px;
-  max-width: 1440px;
-  height: 100vh;
+  width: 1250px;
+  min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.cont-tablet{
+.cont-tablet {
   position: fixed;
   width: 780px;
+  height: 556px;
   left: 49%;
-  bottom: 53%;
+  bottom: -80px;
   transform: translateX(-60%);
   z-index: 10;
 }
-
 .cont-tablet .tit-womd {
   width: 256px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-16%) translateY(460%);
+  position: absolute;
+  top: 200px;
+  left: 350px;
   z-index: 30;
 }
-.cont-tablet .tit-womd img{
+.cont-tablet .tit-womd img {
   width: 100%;
 }
-
 .img-tablet {
   width: 100%;
+  height: fit-content;
   position: absolute;
   z-index: 20;
 }
@@ -61,22 +73,18 @@ body {
   justify-content: center;
   align-items: center;
   width: fit-content;
-
-  left: 47%;
-  top: 150%;
-  transform: translateX(-6%);
+  left: 46%;
+  bottom: 420px;
   z-index: 30;
   text-align: left;
-  font-family: 'pretendard';
+  font-family: "pretendard";
 }
-
 .date-clock-tablet .date-tablet {
   font-size: 18px;
   margin: 6px 20px;
   text-align: center;
   font-weight: 400;
 }
-
 .date-clock-tablet .clock-tablet {
   /* width: 100%; */
   margin: 0 20px;
@@ -85,9 +93,13 @@ body {
 }
 
 .cont-what-food {
-  position: relative;
+  width: 400px;
+  position: absolute;
   left: 65%;
-  top: 58%;
+  top: calc(100vh - 50%);
+}
+.cont-what-food .img-line-note {
+  width: 100%;
 }
 
 .btn-what-food {
@@ -108,10 +120,10 @@ body {
 }
 
 .img-pencil {
-  width: 150px;
+  width: 175px;
   position: absolute;
-  top: 160px;
-  left: 196px;
+  top: 164px;
+  left: 190px;
 }
 
 .img-diary {
@@ -131,12 +143,20 @@ body {
 .btn-memo {
   width: 270px;
   position: absolute;
-  right: 160px;
-  top: 290px;
+  right: 100px;
+  top: 250px;
 }
 
 .btn-memo img {
   width: 100%;
+}
+
+.img-pen {
+  width: 166px;
+  position: absolute;
+  right: 50px;
+  top: 220px;
+  transform: rotate(-10deg);
 }
 
 .btn-coffee {
@@ -165,19 +185,11 @@ body {
   position: absolute;
   width: 182px;
   top: 102px;
-  right: 450px;
+  right: 430px;
 }
 
 .cont-weather img {
   width: 100%;
-}
-
-.img-pen{
-  width: 166px;
-  position: absolute;
-  right: 110px;
-  top: 230px;
-  transform: rotate(-10deg);
 }
 
 .img-pot {
@@ -185,4 +197,18 @@ body {
   position: absolute;
   right: 180px;
   top: 30px;
+}
+
+@media screen and (max-height: 750px) {
+  .cont-tablet {
+    bottom: -120px;
+  }
+
+  .btn-calc {
+    top: 40px;
+  }
+
+  .cont-weather {
+    top: 60px;
+  }
 }
