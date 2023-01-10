@@ -1,77 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's on my desk</title>
-    <link rel="stylesheet" href="./assets/style/style.css" />
-    <link rel="stylesheet" href="./assets/style/whatFoodStyle.css">
-  </head>
-  <body>
-    <main class="container">
-      <div class="cont-tablet">
-        <img
-          class="img-tablet"
-          src="./assets/images/tabletArm.png"
-          alt="테블릿"
-        />
-        <div class="date-clock-tablet">
-          <div class="date-tablet"></div>
-          <div class="clock-tablet"></div>
-        </div>
-        <h1 class="tit-womd">
-          <img
-            class="img-title"
-            src="./assets/images/logo.png"
-            alt="What's on my desk"
-          />
-        </h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's on my desk</title>
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <link rel="stylesheet" href="./assets/style/whatFoodStyle.css">
+  <link rel="stylesheet" href="./assets/style/coffee.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="cont-tablet">
+      <img class="img-tablet" src="./assets/images/tabletArm.png" alt="테블릿" />
+      <div class="date-clock-tablet">
+        <div class="date-tablet"></div>
+        <div class="clock-tablet"></div>
       </div>
+      <h1 class="tit-womd">
+        <img class="img-title" src="./assets/images/logo.png" alt="What's on my desk" />
+      </h1>
+    </div>
 
-      <!-- 계산기 -->
-      <button class="btn-calc" type="button">
-        <img src="./assets/images/calculator.png" alt="계산기" />
+    <!-- 계산기 -->
+    <button href="./CoffeeMenu/coffee.html" class="btn-calc" type="button">
+      <img src="./assets/images/calculator.png" alt="계산기" />
+    </button>
+    <!--// 계산기 -->
+
+    <!-- 날씨 -->
+    <div class="cont-weather">
+      <img src="./assets/images/polaroid.png" alt="오늘의 날씨" />
+    </div>
+    <!-- // 날씨 -->
+
+    <!-- 커피메뉴판 -->
+    <button class="btn-coffee" type="button">
+      <img src="./assets/images/coffee.png" alt="커피 메뉴판" />
+    </button>
+    <!-- // 커피메뉴판 -->
+
+    <!-- 오늘뭐먹지? -->
+    <div class="cont-what-food">
+      <img class="img-line-note" src="./assets/images/lineNote.png" alt="" />
+      <button class="btn-what-food" type="button">
+        <img src="./assets/images/food.png" alt="오늘 뭐먹지?" />
       </button>
-      <!--// 계산기 -->
+      <img class="img-pencil" src="./assets/images/pencil.png" alt="" />
+    </div>
+    <!-- // 오늘뭐먹지? -->
 
-      <!-- 날씨 -->
-      <div class="cont-weather">
-        <img src="./assets/images/polaroid.png" alt="오늘의 날씨" />
+    <!-- 메모지 -->
+    <button class="btn-memo" type="button">
+      <img src="./assets/images/memo.png" alt="메모지" />
+    </button>
+    <!-- // 메모지 -->
+
+    <img class="img-glasses" src="./assets/images/glasses.png" alt="" />
+    <img class="img-diary" src="./assets/images/note.png" alt="" />
+
+    <img class="img-pen" src="./assets/images/pen.png" alt="" />
+    <img class="img-pot" src="./assets/images/pot.png" alt="" />
+  </main>
+
+
+  <!-- Modal 오늘뭐먹지 -->
+  <div class="modal-wrap hidden">
+    <article id="modal">
+      <h2 class="modal-tit">오늘 뭐먹지?</h2>
+      <div class="what-food-wrap"></div>
+      <button class="btn-choose" type="button">메뉴 고르기</button>
+    </article>
+  </div>
+  <!-- // Modal 오늘뭐먹지 -->
+
+  <!-- Modal 커피 메뉴판 -->
+  <div class="coffee-modal-wrap hidden">
+    <section class="coffee-modal">
+      <button type="button" class="off-modal">
+        <img src="./assets/images/off_icon.png" alt="모달끄기">
+      </button>
+      <h2 class="coffee-title">MENU</h2>
+      <div class="cont-coffee-btns">
+  
       </div>
-      <!-- // 날씨 -->
-
-      <!-- 커피메뉴판 -->
-      <button class="btn-coffee" type="button">
-        <img src="./assets/images/coffee.png" alt="커피 메뉴판" />
-      </button>
-      <!-- // 커피메뉴판 -->
-
-      <!-- 오늘뭐먹지? -->
-      <div class="cont-what-food">
-        <img class="img-line-note" src="./assets/images/lineNote.png" alt="" />
-        <button class="btn-what-food" type="button">
-          <img src="./assets/images/food.png" alt="오늘 뭐먹지?" />
-        </button>
-        <img class="img-pencil" src="./assets/images/pencil.png" alt="" />
+  
+      <div class="cont-coffee-items">
+        <article class="menu-item">
+          <img src="../assets/images/coffee/item-18.jpg" class="coffee-img-item" alt="menu item">
+          <div class="coffee-item-info">
+            <header>
+              <h4>pancakes</h4>
+              <h4 class="coffee-price">12,000원</h4>
+            </header>
+            <p class="coffee-txt-item">아주아주 맛있는 팬케이쿠</p>
+          </div>
+        </article>
       </div>
-      <!-- // 오늘뭐먹지? -->
+    </section>
+  </div>
+  <!-- // Modal 커피 메뉴판 -->
 
-      <!-- 메모지 -->
-      <button class="btn-memo" type="button">
-        <img src="./assets/images/memo.png" alt="메모지" />
-      </button>
-      <!-- // 메모지 -->
+  <script src="./assets/script/clock.js"></script>
+  <script src="./assets/script/calculator.js"></script>
+  <script src="./assets/script/whatFood.js"></script>
+  <script src="./assets/script/coffee.js"></script>
+</body>
 
-      <img class="img-glasses" src="./assets/images/glasses.png" alt="" />
-      <img class="img-diary" src="./assets/images/note.png" alt="" />
+</html>
 
-      <img class="img-pen" src="./assets/images/pen.png" alt="" />
-      <img class="img-pot" src="./assets/images/pot.png" alt="" />
-    </main>
 
-    <!-- 계산기 모달 -->
-    <!-- <div class="calculator">
+
+<!-- 계산기 모달 -->
+<!-- <div class="calculator">
     <label for="screenCalc"></label>
     <input type="number" id="screenCalc" value="0" readonly>
     <div>
@@ -104,20 +147,4 @@
       <button type="button">.</button>
     </div>
   </div> -->
-    <!-- // 계산기 모달 -->
-
-    <!-- Modal 오늘뭐먹지 -->
-    <div class="modal-wrap hidden">
-      <article id="modal">
-        <h2 class="modal-tit">오늘 뭐먹지?</h2>
-        <div class="what-food-wrap"></div>
-        <button class="btn-choose" type="button">메뉴 고르기</button>
-      </article>
-    </div>
-    <!-- // Modal 오늘뭐먹지 -->
-
-    <script src="./assets/script/clock.js"></script>
-    <script src="./assets/script/calculator.js"></script>
-    <script src="./assets/script/whatFood.js"></script>
-  </body>
-</html>
+<!-- // 계산기 모달 -->
