@@ -36,17 +36,11 @@
   overflow-y: scroll;
 }
 
-/* .coffee-title {
-  font-size: 40px;
-  text-align: center;
-  margin: 50px 0 50px;
-} */
-
 /* font-size */
 .coffee-modal-wrap h2 {
   font-size: 2rem;
-  /* font-weight: 700; */
   color : var(--tit-color);
+  /* font-weight: 900; */
 }
 
 .coffee-modal-wrap h2::after{
@@ -74,7 +68,8 @@
 
 .coffee-img-item {
   object-fit: cover;
-  height: 200px;
+  height: 150px;
+  width: 220px;
   border: 0.25rem solid var(--base-br-color);
   border-radius: 0.5rem;
 }
@@ -82,13 +77,25 @@
 .coffee-item-info header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid var(--base-br-color); /* 컬러 */
+  border-bottom: 2px solid var(--base-br-color);
+  padding-bottom: 0.2rem;
 }
 
 .cont-coffee-btns button{
   text-transform: uppercase;
   padding: 0.2rem 0.8rem;
   margin: 1.5rem 0;
+  transition: all 0.3s linear;
+  background-color: var(--tit-color);
+  border: 2px solid var(--sub-gd-color);
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  color: var(--main-bg-color);
+  font-weight: 500;
+}
+.cont-coffee-btns button:hover{
+  color: var(--tit-color);
+  background-color: var(--main-bg-color);
 }
 
 .coffee-modal-wrap .off-modal{
@@ -100,4 +107,23 @@
 }
 .coffee-modal-wrap .off-modal img {
   width: 100%;
+}
+
+.cont-coffee-items {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 4.5rem;
+  justify-items: center;
+  max-width: 1100px;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem 0.5rem;
+}
+
+.coffee-txt-item{
+  padding-top: 1rem;
 }
