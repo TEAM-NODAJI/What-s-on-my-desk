@@ -153,11 +153,6 @@ const btnCloseModal = document.querySelector(".off-modal");
 const contItems = document.querySelector(".cont-coffee-items");
 const contBtns = document.querySelector(".cont-coffee-btns");
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   setMenuItems(menu);
-//   setMenuBtns();
-// })
-
 openMenuModal.addEventListener("click",() => {
   coffeeModal.classList.remove("hidden");
   setMenuItems(menu);
@@ -204,7 +199,7 @@ function setMenuBtns() {
       <button type="button" class="filter-btn" data-id=${category}>${category}</button>
     `;
   }).join("");
-  console.log(filterBtns);
+  // console.log(filterBtns);
 
   contBtns.innerHTML = filterBtns;
   const categoryBtns = contBtns.querySelectorAll(".filter-btn");
