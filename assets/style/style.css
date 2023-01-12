@@ -22,14 +22,13 @@ body {
   left: 49%;
   bottom: -80px;
   transform: translateX(-60%);
-  z-index: 10;
+  z-index: 20;
 }
 .cont-tablet .tit-womd {
   width: 256px;
   position: absolute;
   top: 200px;
   left: 350px;
-  z-index: 30;
 }
 .cont-tablet .tit-womd img {
   width: 100%;
@@ -38,7 +37,6 @@ body {
   width: 100%;
   height: fit-content;
   position: absolute;
-  z-index: 20;
 }
 
 .date-clock-tablet {
@@ -50,7 +48,6 @@ body {
   width: fit-content;
   left: 46%;
   bottom: 420px;
-  z-index: 30;
   text-align: left;
   font-family: "pretendard";
 }
@@ -80,6 +77,7 @@ body {
 .btn-what-food {
   width: 170px;
   position: absolute;
+  z-index: 10;
 }
 
 .btn-what-food img {
