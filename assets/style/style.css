@@ -1,29 +1,4 @@
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-:root {
-  --font: "Pretendard";
-}
-
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-family: var(--font);
-}
-
-/* layout */
+/* main layout */
 body {
   position: relative;
   width: 100vw;

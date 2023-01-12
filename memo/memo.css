@@ -1,0 +1,110 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.form-memo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  gap: 14px;
+}
+
+.title {
+  flex-shrink: 0;
+  font-size: 25px;
+  padding-right: 50px;
+}
+.title::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  height: 1px;
+  background-color: tan;
+}
+
+.inp-memo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+  border: none;
+  text-align: justify;
+  word-break: break-all;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(32, 24, 18, 0.3);
+}
+.inp-memo:focus {
+  background-color: rgb(255, 218, 97);
+}
+
+.btn-memo {
+  align-self: flex-end;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 5px rgba(32, 24, 18, 0.6);
+  backdrop-filter: blur(1.5px);
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: calc(100vw - 223px);
+  max-width: 1080px;
+  min-width: 496px;
+  min-height: 500px;
+  padding: 50px 40px 40px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(32, 24, 18, 0.6);
+  background-color: tan;
+}
+
+.memo-wrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+  background-color: rgb(255, 218, 97);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.memo-wrap::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 60px;
+  position: absolute;
+  top: -30px;
+  left: 90px;
+  transform: rotate(85deg);
+  background-color: rgba(255, 189, 67, 0.4);
+  backdrop-filter: blur(0.5px);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.tiny-memo {
+  font-size: 25px;
+  text-align: center;
+}
+.regular-memo {
+  font-size: 16px;
+}
+
+.long-memo {
+  font-size: 14px;
+  text-align: justify;
+  word-break: break-all;
+}
