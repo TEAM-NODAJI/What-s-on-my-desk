@@ -1,7 +1,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: bisque;
+  background-color: blanchedalmond;
 }
 
 .wrap {
@@ -15,7 +15,7 @@ body {
 }
 
 .title {
-  padding: 30px;
+  padding: 40px 0 20px;
   font-size: 25px;
   text-align: center;
 }
@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
-  gap: 10px;
+  gap: 14px;
   
 }
 /* .title::after {
@@ -44,7 +44,7 @@ body {
   border: none;
 }
 .btn-memo {
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   color: white;
   background-color: black;
