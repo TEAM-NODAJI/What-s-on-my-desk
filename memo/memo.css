@@ -65,9 +65,9 @@ body {
   gap: 20px;
   width: calc(100vw - 223px);
   max-width: 1080px;
-  min-width: 460px;
+  min-width: 496px;
   min-height: 500px;
-  padding: 40px;
+  padding: 50px 40px 40px;
   margin: 40px auto;
   border-radius: 20px;
   box-shadow: 0 0 5px rgba(32, 24, 18, 0.6);
