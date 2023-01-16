@@ -58,6 +58,9 @@ body {
   box-shadow: 0 0 5px rgba(32, 24, 18, 0.6);
   backdrop-filter: blur(1.5px);
 }
+.btn-memo:hover {
+  color: rgb(255, 218, 97);
+}
 
 .wrap {
   display: flex;
@@ -75,7 +78,7 @@ body {
   background-color: tan;
 }
 
-.memo-wrap {
+.memo-cont {
   position: relative;
   width: 160px;
   height: 160px;
@@ -83,7 +86,7 @@ body {
   background-color: rgb(255, 218, 97);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
-.memo-wrap::before {
+.memo-cont::before {
   content: "";
   display: block;
   width: 20px;
@@ -97,12 +100,13 @@ body {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.tiny-memo {
+.short-memo {
   font-size: 25px;
   text-align: center;
 }
 .regular-memo {
   font-size: 16px;
+  line-height: 1.25;
 }
 .long-memo {
   font-size: 14px;
