@@ -27,6 +27,11 @@ function loadMemo() {
     } else {
       memoText.classList.add("regular-memo");
     }
+
+    const $deleteBtns = document.querySelectorAll(".delete-btn");
+    $deleteBtns.forEach((button) => {
+      button.addEventListener("click", removeMemo);
+    });
   });
 }
 
@@ -38,7 +43,8 @@ const renderMemo = () => {
   const memoText = document.createElement("p");
   const deleteBtn = document.createElement("button");
   memoCont.classList.add("memo-cont");
-  $memoWrap.append(memoCont);
+  // $memoWrap.append(memoCont);
+  $memoWrap.insertBefore(memoCont, parent.firstChild);
   memoText.textContent = getText;
   deleteBtn.classList.add("delete-btn");
   memoCont.append(memoText, deleteBtn);
@@ -53,8 +59,14 @@ const renderMemo = () => {
   } else {
     memoText.classList.add("regular-memo");
   }
+
+  const $deleteBtns = document.querySelectorAll(".delete-btn");
+  $deleteBtns.forEach((button) => {
+    button.addEventListener("click", removeMemo);
+  });
 };
 
+// 새로운 메모를 추가하는 함수
 const addMemo = () => {
   const getText = $inpMemo.value;
 
@@ -76,8 +88,19 @@ const addMemo = () => {
 
 const removeMemo = (event) => {
   let memoList = Array.from(JSON.parse(localStorage.getItem("my-memo")));
-  // console.log(memoList);
-  // console.log(event.parentNode);
+  console.log(memoList);
+  console.log(event.target.parentNode);
+  console.log(event.target.parentNode.children[0]);
+  console.log(event.target.parentNode.children[0].textContent);
+
+  memoList.forEach((memo) => {
+    if (memo.memo === event.target.parentNode.children[0].textContent) {
+      // 메모 삭제
+      memoList.splice(memoList.indexOf(memo), 1);
+    }
+  });
+  localStorage.setItem("my-memo", JSON.stringify(memoList));
+  event.target.parentElement.remove();
 };
 
 $btnMemo.addEventListener("click", addMemo);
