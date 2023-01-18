@@ -99,7 +99,11 @@ body {
   backdrop-filter: blur(0.5px);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
-
+.memo-cont p {
+  width: inherit;
+  height: inherit;
+  overflow: auto;
+}
 .short-memo {
   font-size: 25px;
   text-align: center;
@@ -112,6 +116,7 @@ body {
   font-size: 14px;
   text-align: justify;
   word-break: break-all;
+  border-bottom: 1px solid rgba(255, 190, 0, 0.5);
 }
 
 /* 삭제 버튼 */
