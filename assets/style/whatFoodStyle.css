@@ -14,7 +14,6 @@
   100% {
     transform: translateY(-66.6666%);
   }
-
 }
 
 /* Modal */
@@ -22,6 +21,15 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 40;
+}
+
+.backdrop {
+  position: fixed;
+  width: inherit;
+  height: inherit;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
@@ -67,10 +75,15 @@
 
 .what-food-list {
   list-style: none;
-  animation: rotate 1.5s infinite;
+  /* animation: rotate 1.5s infinite; */
 }
 
 .list-item {
+  font-size: 30px;
+  color: rgb(255, 191, 0);
+}
+
+.selected {
   font-size: inherit;
 }
 
