@@ -5,7 +5,7 @@ const menu = [
     category: "coffee",
     price: 3500,
     img: "item-1.jpg",
-    desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+    desc: `추출한 에스프레소 샷에 물을 부어 마시는 연한 커피. 블렌딩 방식이나 원두의 원산지에 따라 산미, 풍미 단맛, 부드러운 맛 등을 다양하게 즐길 수 있다.`,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const menu = [
     category: "coffee",
     price: 3000,
     img: "item-2.jpg",
-    desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+    desc: `원두를 곱게 갈아서 압축한 후, 고온의 물을 고압으로 통과시켜 추출해낸 이탈리안 정통커피.`,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const menu = [
     category: "coffee",
     price: 4000,
     img: "item-3.jpg",
-    desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+    desc: `에스프레소에 뜨거운 우유를 넣어 만드는 커피.`,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const menu = [
     category: "coffee",
     price: 4000,
     img: "item-4.jpg",
-    desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
+    desc: `에스프레소, 뜨거운 우유, 그리고 우유 거품을 재료로 만드는 커피. 보통 코코아 가루나 계피 가루를 뿌려 마신다.`,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const menu = [
     category: "SetMenu",
     price: 9000,
     img: "item-5.jpg",
-    desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
+    desc: `쌀가루로 만든 부드럽고 촉촉한 모카롤케익 + 아메리카노 세트`,
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const menu = [
     category: "SetMenu",
     price: 10000,
     img: "item-6.jpg",
-    desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
+    desc: `여러 겹으로 이루어져 있는 텍스처가 특징인 초승달 모양의 크로와상 + 아메리카노 세트. 크로플로 변경 가능.`,
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const menu = [
     category: "coffee",
     price: 7000,
     img: "item-7.jpg",
-    desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+    desc: `기본 파르페 구성 - 아이스크림, 웨하스, 죠리퐁, 초코시럽, 빼빼로, 솜사탕`,
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const menu = [
     category: "SetMenu",
     price: 8000,
     img: "item-8.jpg",
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    desc: `수제 초콜릿 3구 + 라떼 세트. 초콜릿 선택 가능`,
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const menu = [
     category: "coffee",
     price: 5500,
     img: "item-9.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `아이스크림 위에 진한 에스프레소를 끼얹어 먹는 이탈리아 대표 디저트`,
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const menu = [
     category: "coffee",
     price: 5000,
     img: "item-10.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `홍차에 우유를 넣은 스윗 로얄 밀크티. 홍차 종류 선택 가능`,
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ const menu = [
     category: "dessert",
     price: 3000,
     img: "item-11.jpg",
-    desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+    desc: `크림을 넣고 그 위에 딸기 시럽을 바른 길쭉한 모양의 슈 페이스트리 디저트`,
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ const menu = [
     category: "dessert",
     price: 6000,
     img: "item-12.jpg",
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    desc: `몽떼크림과 라즈베리 잼을 샌드한 조각 케이크`,
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ const menu = [
     category: "coffee",
     price: 4500,
     img: "item-13.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `진한 초콜릿 모카 시럽과 에스프레소를 스팀 밀크와 섞어 휘핑크림으로 마무리한 커피`,
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ const menu = [
     category: "dessert",
     price: 4000,
     img: "item-14.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `라즈베리가 주 재료인 페어리 케이크. 포장 가능`,
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ const menu = [
     category: "dessert",
     price: 6500,
     img: "item-15.jpg",
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    desc: `촉촉하고 얇은 초콜릿 스폰지 사이사이에 부드러운 초코무스가 듬뿍 올라간 초코케이크`,
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ const menu = [
     category: "dessert",
     price: 8000,
     img: "item-16.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `커피에 적신 사보이아르디 및 마스카르포네를 주재료로 만든 디저트`,
   },
   {
     id: 17,
@@ -133,7 +133,7 @@ const menu = [
     category: "SetMenu",
     price: 5500,
     img: "item-17.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `수제 마카롱 3구 + 아메리카노 세트. 마카롱 선택가능`,
   },
   {
     id: 18,
@@ -141,7 +141,7 @@ const menu = [
     category: "dessert",
     price: 7000,
     img: "item-18.jpg",
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    desc: `폭신한 딸기 수플레 팬케이크. 시럽 선택 가능`,
   },
 ];
 
