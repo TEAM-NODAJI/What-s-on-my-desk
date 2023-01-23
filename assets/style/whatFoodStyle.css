@@ -43,10 +43,10 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  top: calc(50vh - 250px);
-  left: calc(50vw - 400px);
-  width: 800px;
-  height: 500px;
+  top: calc(50vh - 230px);
+  left: calc(50vw - 360px);
+  width: 720px;
+  height: 460px;
   z-index: 50;
   border-radius: 40px;
   border: 5px solid white;
@@ -55,9 +55,16 @@
 }
 
 #modal .modal-tit {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
-  margin: 50px 0 40px;
+  margin-bottom: 60px;
+}
+.modal-tit::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  height: 2px;
+  background-color: #111;
 }
 
 .what-food-wrap {
@@ -97,7 +104,7 @@
   height: 52px;
   font-size: 20px;
   font-weight: 800;
-  margin: 50px auto;
+  margin-top: 60px;
   color: white;
   border-radius: 50px;
   z-index: 0;
@@ -153,7 +160,7 @@
   height: 52px;
   font-size: 20px;
   font-weight: 800;
-  margin: 50px auto;
+  margin-top: 60px;
   color: white;
   border-radius: 50px;
   background-image: linear-gradient(
