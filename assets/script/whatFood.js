@@ -78,6 +78,7 @@ const selectFood = () => {
 };
 
 const closeModal = () => {
+  reset();
   $modalWrap.classList.add("hidden");
   const $modalList = $modalWrap.querySelector(".what-food-list");
   $whatFoodWrap.removeChild($modalList);
