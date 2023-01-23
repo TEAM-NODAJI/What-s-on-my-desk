@@ -35,30 +35,45 @@ const openModal = () => {
   $modalWrap.classList.remove("hidden");
   const modalList = document.createElement("ul");
   modalList.classList.add("what-food-list");
+  modalList.classList.add("move-list");
   $whatFoodWrap.appendChild(modalList);
-  const modalListItem = document.createElement("li");
-  modalListItem.classList.add("list-item");
-  modalListItem.textContent = "과연 오늘의 메뉴는...?";
-  modalList.appendChild(modalListItem);
+
+  for (let i = 0; i < foodList.length; i++) {
+    const food = foodList[i];
+    const modalListItem = document.createElement("li");
+    modalListItem.classList.add("list-item");
+    modalListItem.textContent = food;
+    modalList.appendChild(modalListItem);
+  }
+};
+
+const reset = () => {
+  const $modalList = document.querySelector(".what-food-list");
+  $modalList.style.transform = "translateY(0px)";
+  $modalList.classList.add("move-list");
+  $chooseBtn.classList.remove("btn-reset");
+  $chooseBtn.textContent = "메뉴 고르기";
+  $chooseBtn.classList.add("btn-choose");
+  chance = 1;
 };
 
 let chance = 1;
 
 const selectFood = () => {
   chance = --chance;
-  const randomFood = foodList[Math.floor(Math.random() * foodList.length)];
-  console.log(randomFood);
 
   if (chance === 0) {
+    const randomHeight = Math.floor(Math.random() * (foodList.length - 1));
+    const height = randomHeight * 100;
+
     const $modalList = document.querySelector(".what-food-list");
-    $modalList.removeChild($modalList.firstChild);
-    const modalListItem = document.createElement("li");
-    modalListItem.classList.add("selected");
-    modalListItem.textContent = randomFood;
-    $modalList.appendChild(modalListItem);
+    $modalList.classList.remove("move-list");
+    $modalList.style.transform = `translateY(${-height}px)`;
+    $chooseBtn.classList.remove("btn-choose");
+    $chooseBtn.textContent = "다시 뽑기";
+    $chooseBtn.classList.add("btn-reset");
   } else {
-    const $modalListItem = document.querySelector(".selected");
-    $modalListItem.textContent = randomFood;
+    reset();
   }
 };
 
@@ -66,7 +81,6 @@ const closeModal = () => {
   $modalWrap.classList.add("hidden");
   const $modalList = $modalWrap.querySelector(".what-food-list");
   $whatFoodWrap.removeChild($modalList);
-  chance = 1;
 };
 
 $openModalBtn.addEventListener("click", openModal);
