@@ -3,7 +3,6 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  font-family: var(--font);
   background-color: #e8f7fb;
 }
 
@@ -22,7 +21,7 @@ body {
   left: 49%;
   bottom: -80px;
   transform: translateX(-60%);
-  z-index: 20;
+  z-index: 30;
 }
 .cont-tablet .tit-womd {
   width: 256px;
@@ -48,17 +47,14 @@ body {
   width: fit-content;
   left: 46%;
   bottom: 420px;
-  text-align: left;
-  font-family: "pretendard";
+  text-align: center;
 }
 .date-clock-tablet .date-tablet {
   font-size: 18px;
   margin: 6px 20px;
-  text-align: center;
   font-weight: 400;
 }
 .date-clock-tablet .clock-tablet {
-  /* width: 100%; */
   margin: 0 20px;
   font-size: 40px;
   font-weight: 600;
@@ -79,7 +75,6 @@ body {
   position: absolute;
   z-index: 10;
 }
-
 .btn-what-food img {
   width: 100%;
   position: absolute;
@@ -114,22 +109,14 @@ body {
 }
 
 .btn-memo {
-  width: 270px;
+  width: 350px;
   position: absolute;
-  right: 100px;
-  top: 250px;
+  right: 35px;
+  top: 210px;
+  z-index: 20;
 }
-
 .btn-memo img {
   width: 100%;
-}
-
-.img-pen {
-  width: 166px;
-  position: absolute;
-  right: 50px;
-  top: 220px;
-  transform: rotate(-10deg);
 }
 
 .btn-coffee {
@@ -138,7 +125,6 @@ body {
   top: 50px;
   left: 50px;
 }
-
 .btn-coffee img {
   width: 100%;
 }
@@ -149,7 +135,6 @@ body {
   top: 70px;
   left: 400px;
 }
-
 .btn-calc img {
   width: 100%;
 }
@@ -160,7 +145,6 @@ body {
   top: 102px;
   right: 430px;
 }
-
 .cont-weather img {
   width: 100%;
 }

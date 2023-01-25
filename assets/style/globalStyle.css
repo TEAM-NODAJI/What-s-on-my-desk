@@ -16,6 +16,10 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--font);
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -32,9 +36,5 @@ h1 {
 input,
 textarea,
 ::placeholder {
-  font-family: var(--font);
-}
-
-body {
   font-family: var(--font);
 }
