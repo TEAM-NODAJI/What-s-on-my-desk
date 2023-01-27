@@ -4,6 +4,8 @@
 // 4. AC 기능 구현
 // 5. 계산 기능 구현 (=버튼)
 // 6. 예외 처리
+const openCalcModal = document.querySelector(".btn-calc");
+const calcModal = document.querySelector(".calculator-wrap");
 
 const contCalc = document.querySelector(".calculator");
 const numburBtns = contCalc.querySelectorAll("[data-number]");
@@ -15,6 +17,16 @@ const equalsBtn = contCalc.querySelector("#btnEquals");
 
 const lastScreen = contCalc.querySelector("#lastScreen");
 const currentScreen = contCalc.querySelector("#currentScreen");
+
+openCalcModal.addEventListener("click", () => {
+  calcModal.classList.remove("hidden");
+})
+
+calcModal.addEventListener("click", (e) => {
+  if(e.target.classList.contains("calculator-wrap")){
+    calcModal.classList.add("hidden");
+  }
+})
 
 numburBtns.forEach((button) => {
   button.addEventListener("click", () => insertNum(button.textContent))
@@ -30,16 +42,23 @@ pointBtn.addEventListener("click", addPoint);
 equalsBtn.addEventListener("click", evaluate);
 
 function insertNum(number) {
+  if (currentScreen.textContent === '0') {
+    currentScreen.textContent = "";
+  }
   currentScreen.textContent += number;
 }
 
 function clear() {
   currentScreen.textContent = "0";
-  lastScreen.textContent = "";
+  lastScreen.textContent = "0";
 }
 
 function deleteNum() {
-  currentScreen.textContent = currentScreen.textContent.toString().slice(0, -1);
+  if(currentScreen.textContent.length === 1){
+    currentScreen.textContent = "0";
+  } else {
+    currentScreen.textContent = currentScreen.textContent.toString().slice(0, -1);
+  }
 }
 
 function addPoint() {
