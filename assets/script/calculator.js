@@ -18,12 +18,17 @@ const equalsBtn = contCalc.querySelector("#btnEquals");
 const lastScreen = contCalc.querySelector("#lastScreen");
 const currentScreen = contCalc.querySelector("#currentScreen");
 
+let firstAppendNum = "";
+let secondAppendNum = "";
+let currentOper = null;
+let isResetScreen = false;
+
 openCalcModal.addEventListener("click", () => {
   calcModal.classList.remove("hidden");
 })
 
 calcModal.addEventListener("click", (e) => {
-  if(e.target.classList.contains("calculator-wrap")){
+  if (e.target.classList.contains("calculator-wrap")) {
     calcModal.classList.add("hidden");
   }
 })
@@ -42,8 +47,8 @@ pointBtn.addEventListener("click", addPoint);
 equalsBtn.addEventListener("click", evaluate);
 
 function insertNum(number) {
-  if (currentScreen.textContent === '0') {
-    currentScreen.textContent = "";
+  if (currentScreen.textContent === '0' || isResetScreen) {
+    resetScreen();
   }
   currentScreen.textContent += number;
 }
@@ -51,10 +56,14 @@ function insertNum(number) {
 function clear() {
   currentScreen.textContent = "0";
   lastScreen.textContent = "0";
+  firstAppendNum = "";
+  secondAppendNum = "";
+  currentOper = null;
+  isResetScreen = false;
 }
 
 function deleteNum() {
-  if(currentScreen.textContent.length === 1){
+  if (currentScreen.textContent.length === 1) {
     currentScreen.textContent = "0";
   } else {
     currentScreen.textContent = currentScreen.textContent.toString().slice(0, -1);
@@ -62,15 +71,33 @@ function deleteNum() {
 }
 
 function addPoint() {
-  console.log("=addPoint=!!");
+  if (currentScreen.textContent.includes(".")) return;
+  currentScreen.textContent += ".";
 }
 
 function evaluate() {
-  console.log("===!!");
+  if (currentOper === null || isResetScreen) return;
+  if (currentOper === "÷" && currentScreen.textContent === "0") {
+    alert("0으로 나누기는 불가능합니다!");
+    return
+  }
+  secondAppendNum = currentScreen.textContent;
+  currentScreen.textContent = operate(firstAppendNum, currentOper, secondAppendNum);
+  lastScreen.textContent = `${firstAppendNum} ${currentOper} ${secondAppendNum} =`;
+  currentOper = null;
 }
 
 function setUpOperation(operator) {
-  console.log(operator);
+  if (currentOper !== null) evaluate();
+  firstAppendNum = currentScreen.textContent;
+  currentOper = operator;
+  lastScreen.textContent = `${firstAppendNum} ${currentOper}`;
+  isResetScreen = true;
+}
+
+function resetScreen() {
+  currentScreen.textContent = "";
+  isResetScreen = false;
 }
 
 function plus(a, b) {
@@ -89,7 +116,7 @@ function divide(a, b) {
   return a / b;
 }
 
-function operate(operator, a, b) {
+function operate(a, operator, b) {
   a = Number(a);
   b = Number(b);
   switch (operator) {
@@ -101,7 +128,7 @@ function operate(operator, a, b) {
       return multiply(a, b);
     case "÷":
       if (b === 0) {
-        return null;
+        return null
       } else {
         return divide(a, b);
       }

@@ -40,7 +40,8 @@
   width: 100%;
   text-align: right;
   font-size: 1.8rem;
-
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .screen-last {
