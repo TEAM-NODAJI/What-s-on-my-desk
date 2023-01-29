@@ -33,14 +33,12 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   background-color: var(--main-bg-color);
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
-/* font-size */
 .coffee-modal-wrap h2 {
   font-size: 2rem;
   color : var(--tit-color);
-  /* font-weight: 900; */
 }
 
 .coffee-modal-wrap h2::after{
@@ -116,6 +114,22 @@
   gap: 2rem 4.5rem;
   justify-items: center;
   max-width: 1100px;
+  overflow-y: scroll;
+}
+
+.cont-coffee-items::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.cont-coffee-items::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--tit-color);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+.cont-coffee-items::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .menu-item {
