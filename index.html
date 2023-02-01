@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's on my desk</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What's on my desk</title>
-  <link rel="stylesheet" href="./assets/style/globalStyle.css" />
-  <link rel="stylesheet" href="./assets/style/style.css" />
-  <link rel="stylesheet" href="./assets/style/calculator.css" />
-  <link rel="stylesheet" href="./assets/style/whatFoodStyle.css" />
-  <link rel="stylesheet" href="./assets/style/coffee.css" />
-</head>
-
-<body>
-  <main class="container">
-    <div class="cont-tablet">
-      <img class="img-tablet" src="./assets/images/tabletArm.png" alt="테블릿" />
-      <div class="date-clock-tablet">
-        <div class="date-tablet"></div>
-        <div class="clock-tablet"></div>
+  <body>
+    <main class="container">
+      <div class="cont-tablet">
+        <img
+          class="img-tablet"
+          src="./assets/images/tabletArm.png"
+          alt="테블릿"
+        />
+        <div class="date-clock-tablet">
+          <div class="date-tablet"></div>
+          <div class="clock-tablet"></div>
+        </div>
+        <h1 class="tit-womd">
+          <img
+            class="img-title"
+            src="./assets/images/logo.png"
+            alt="What's on my desk"
+          />
+        </h1>
       </div>
-      <h1 class="tit-womd">
-        <img class="img-title" src="./assets/images/logo.png" alt="What's on my desk" />
-      </h1>
-    </div>
 
-    <!-- 계산기 -->
-    <button href="./CoffeeMenu/coffee.html" class="btn-calc" type="button">
-      <img src="./assets/images/calculator.png" alt="계산기" />
-    </button>
-    <!--// 계산기 -->
-
-    <!-- 날씨 -->
-    <div class="cont-weather">
-      <img src="./assets/images/polaroid.png" alt="오늘의 날씨" />
-    </div>
-    <!-- // 날씨 -->
-
-    <!-- 커피메뉴판 -->
-    <button class="btn-coffee" type="button">
-      <img src="./assets/images/coffee.png" alt="커피 메뉴판" />
-    </button>
-    <!-- // 커피메뉴판 -->
-
-    <!-- 오늘뭐먹지? -->
-    <div class="cont-what-food">
-      <img class="img-line-note" src="./assets/images/lineNote.png" alt="" />
-      <button class="btn-what-food" type="button">
-        <img src="./assets/images/food.png" alt="오늘 뭐먹지?" />
+      <!-- 계산기 -->
+      <button href="./CoffeeMenu/coffee.html" class="btn-calc" type="button">
+        <img src="./assets/images/calculator.png" alt="계산기" />
       </button>
-      <img class="img-pencil" src="./assets/images/pencil.png" alt="" />
-    </div>
-    <!-- // 오늘뭐먹지? -->
+      <!--// 계산기 -->
+
+      <!-- 날씨 -->
+      <article class="cont-weather">
+        <div class="cont-weather-position">
+          <h2 class="city">경기도 / KR</h2>
+          <div class="cont-temp">
+            <strong class="temp">0&#176;</strong>
+            <div class="cont-condition">
+              <h3 class="weather-condition">Clear</h3>
+              <figure class="icon"></figure>
+            </div>
+            <div class="min-max">
+              <span class="temp-max">최대 : 0</span>
+              <span class="temp-min">최저 : 0</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- // 날씨 -->
+
+      <!-- 커피메뉴판 -->
+      <button class="btn-coffee" type="button">
+        <img src="./assets/images/coffee.png" alt="커피 메뉴판" />
+      </button>
+      <!-- // 커피메뉴판 -->
+
+      <!-- 오늘뭐먹지? -->
+      <div class="cont-what-food">
+        <img class="img-line-note" src="./assets/images/lineNote.png" alt="" />
+        <button class="btn-what-food" type="button">
+          <img src="./assets/images/food.png" alt="오늘 뭐먹지?" />
+        </button>
+        <img class="img-pencil" src="./assets/images/pencil.png" alt="" />
+      </div>
+      <!-- // 오늘뭐먹지? -->
 
       <!-- 메모지 -->
       <a class="btn-memo" href="./memo/memo.html">
@@ -65,83 +81,88 @@
       <img class="img-pot" src="./assets/images/pot.png" alt="" />
     </main>
 
-  <!-- Modal 오늘뭐먹지 -->
-  <div class="modal-wrap hidden">
-    <div class="backdrop"></div>
-    <article id="modal">
-      <h2 class="modal-tit">오늘 뭐먹지?</h2>
-      <div class="what-food-wrap"></div>
-      <button class="btn-choose" type="button">메뉴 고르기</button>
-    </article>
-  </div>
-  <!-- // Modal 오늘뭐먹지 -->
+    <!-- Modal 오늘뭐먹지 -->
+    <div class="modal-wrap hidden">
+      <div class="backdrop"></div>
+      <article id="modal">
+        <h2 class="modal-tit">오늘 뭐먹지?</h2>
+        <div class="what-food-wrap"></div>
+        <button class="btn-choose" type="button">메뉴 고르기</button>
+      </article>
+    </div>
+    <!-- // Modal 오늘뭐먹지 -->
 
-  <!-- Modal 커피 메뉴판 -->
-  <div class="coffee-modal-wrap hidden">
-    <section class="coffee-modal">
-      <button type="button" class="off-modal">
-        <img src="./assets/images/off_icon.png" alt="모달끄기" />
-      </button>
-      <h2 class="coffee-title">MENU</h2>
-      <div class="cont-coffee-btns"></div>
+    <!-- Modal 커피 메뉴판 -->
+    <div class="coffee-modal-wrap hidden">
+      <section class="coffee-modal">
+        <button type="button" class="off-modal">
+          <img src="./assets/images/off_icon.png" alt="모달끄기" />
+        </button>
+        <h2 class="coffee-title">MENU</h2>
+        <div class="cont-coffee-btns"></div>
 
-      <div class="cont-coffee-items">
-        <article class="menu-item">
-          <img src="../assets/images/coffee/item-18.jpg" class="coffee-img-item" alt="menu item" />
-          <div class="coffee-item-info">
-            <header>
-              <h4>pancakes</h4>
-              <h4 class="coffee-price">12,000원</h4>
-            </header>
-            <p class="coffee-txt-item">아주아주 맛있는 팬케이쿠</p>
-          </div>
-        </article>
-      </div>
-    </section>
-  </div>
-  <!-- // Modal 커피 메뉴판 -->
+        <div class="cont-coffee-items">
+          <article class="menu-item">
+            <img
+              src="../assets/images/coffee/item-18.jpg"
+              class="coffee-img-item"
+              alt="menu item"
+            />
+            <div class="coffee-item-info">
+              <header>
+                <h4>pancakes</h4>
+                <h4 class="coffee-price">12,000원</h4>
+              </header>
+              <p class="coffee-txt-item">아주아주 맛있는 팬케이쿠</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+    <!-- // Modal 커피 메뉴판 -->
 
-  <!-- 계산기 모달 -->
-  <div class="calculator-wrap hidden">
-    <section class="calculator">
-      <!-- <label for="screenCalc"></label>
+    <!-- 계산기 모달 -->
+    <div class="calculator-wrap hidden">
+      <section class="calculator">
+        <!-- <label for="screenCalc"></label>
       <input type="number" id="screenCalc" value="0" readonly> -->
-      <div class="screen-calc">
-        <div class="screen-last" id="lastScreen">0</div>
-        <div class="screen-current" id="currentScreen">0</div>
-      </div>
-      <div class="btns-grid">
-        <button type="button" class="btn grid-span" id="btnClear">AC</button>
-        <button type="button" class="btn grid-span" id="btnDel">DEL</button>
-  
-        <button type="button" class="btn" data-number>7</button>
-        <button type="button" class="btn" data-number>8</button>
-        <button type="button" class="btn" data-number>9</button>
-        <button type="button" class="btn" data-operator>&divide;</button>
-  
-        <button type="button" class="btn" data-number>4</button>
-        <button type="button" class="btn" data-number>5</button>
-        <button type="button" class="btn" data-number>6</button>
-        <button type="button" class="btn" data-operator>&times;</button>
-  
-        <button type="button" class="btn" data-number>1</button>
-        <button type="button" class="btn" data-number>2</button>
-        <button type="button" class="btn" data-number>3</button>
-        <button type="button" class="btn" data-operator>-</button>
-  
-        <button type="button" class="btn" data-number>0</button>
-        <button type="button" class="btn" id="btnPoint">.</button>
-        <button type="button" class="btn" id="btnEquals">=</button>
-        <button type="button" class="btn" data-operator>+</button>
-      </div>
-    </section>
-  </div>
-  <!-- // 계산기 모달 -->
+        <div class="screen-calc">
+          <div class="screen-last" id="lastScreen">0</div>
+          <div class="screen-current" id="currentScreen">0</div>
+        </div>
+        <div class="btns-grid">
+          <button type="button" class="btn grid-span" id="btnClear">AC</button>
+          <button type="button" class="btn grid-span" id="btnDel">DEL</button>
 
-  <script src="./assets/script/clock.js"></script>
-  <script src="./assets/script/calculator.js"></script>
-  <script src="./assets/script/whatFood.js"></script>
-  <script src="./assets/script/coffee.js"></script>
-</body>
+          <button type="button" class="btn" data-number>7</button>
+          <button type="button" class="btn" data-number>8</button>
+          <button type="button" class="btn" data-number>9</button>
+          <button type="button" class="btn" data-operator>&divide;</button>
 
+          <button type="button" class="btn" data-number>4</button>
+          <button type="button" class="btn" data-number>5</button>
+          <button type="button" class="btn" data-number>6</button>
+          <button type="button" class="btn" data-operator>&times;</button>
+
+          <button type="button" class="btn" data-number>1</button>
+          <button type="button" class="btn" data-number>2</button>
+          <button type="button" class="btn" data-number>3</button>
+          <button type="button" class="btn" data-operator>-</button>
+
+          <button type="button" class="btn" data-number>0</button>
+          <button type="button" class="btn" id="btnPoint">.</button>
+          <button type="button" class="btn" id="btnEquals">=</button>
+          <button type="button" class="btn" data-operator>+</button>
+        </div>
+      </section>
+    </div>
+    <!-- // 계산기 모달 -->
+
+    <script src="apikey.js"></script>
+    <script src="./assets/script/weather.js"></script>
+    <script src="./assets/script/clock.js"></script>
+    <script src="./assets/script/calculator.js"></script>
+    <script src="./assets/script/whatFood.js"></script>
+    <script src="./assets/script/coffee.js"></script>
+  </body>
 </html>
