@@ -1,3 +1,8 @@
+@import "./globalStyle.css";
+@import "./whatFoodStyle.css";
+@import "./coffee.css";
+@import "./calculator.css";
+
 /* main layout */
 body {
   position: relative;
@@ -139,16 +144,6 @@ body {
   width: 100%;
 }
 
-.cont-weather {
-  position: absolute;
-  width: 182px;
-  top: 102px;
-  right: 430px;
-}
-.cont-weather img {
-  width: 100%;
-}
-
 .img-pot {
   width: 188px;
   position: absolute;
@@ -156,6 +151,79 @@ body {
   top: 30px;
 }
 
+/* weather */
+.cont-weather {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 280px;
+  height: 370px;
+  top: 52px;
+  right: 380px;
+  text-align: center;
+  background: url("../images/polaroid.png") no-repeat center/contain;
+}
+
+.cont-weather-position {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 80px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  gap: 6px;
+}
+
+.cont-weather h2 {
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.cont-condition h3 {
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.cont-weather .cont-temp {
+  display: flex;
+  flex-direction: column;
+}
+.cont-condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 14px;
+}
+
+.cont-temp .temp {
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.cont-temp span {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.cont-temp .min-max {
+  display: flex;
+  gap: 10px;
+}
+
+.cont-condition figure {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.cont-condition figure img {
+  display: block;
+  width: 100%;
+}
+
+/* media */
 @media screen and (max-height: 750px) {
   .cont-tablet {
     bottom: -120px;

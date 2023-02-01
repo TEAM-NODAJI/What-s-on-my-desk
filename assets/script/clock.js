@@ -7,7 +7,7 @@ function getTime() {
   const nowMonth = date.getMonth() + 1;
   const nowDate = date.getDate();
 
-  const week = ['일', '월', '화', '수', '목', '금', '토'];
+  const week = ["일", "월", "화", "수", "목", "금", "토"];
   const nowDay = week[date.getDay()];
 
   tabletDate.textContent = `${nowYear}년 ${nowMonth}월 ${nowDate}일 ${nowDay}요일`;
@@ -15,7 +15,6 @@ function getTime() {
   const nowMinute = date.getMinutes();
   const nowSecond = date.getSeconds();
 
-  // console.log(nowHour, nowMinute, nowSecond)
   tabletClock.textContent = `
     ${nowHour < 10 ? `0${nowHour}` : nowHour} 
     : ${nowMinute < 10 ? `0${nowMinute}` : nowMinute} 
@@ -27,8 +26,3 @@ function liveClock() {
   requestAnimationFrame(getTime);
 }
 liveClock();
-
-
-// $inpHour.value = String(hour).padStart(2, "0");
-// $inpMinute.value = String(minute).padStart(2, "0");
-// $inpSecond.value = String(second).padStart(2, "0");
