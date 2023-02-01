@@ -15,7 +15,7 @@ function loadMemo() {
     const deleteBtn = document.createElement("button");
     memoCont.classList.add("memo-cont");
     $memoWrap.append(memoCont);
-    memoText.textContent = memo.memo;
+    memoText.innerHTML = memo.memo;
     deleteBtn.classList.add("delete-btn");
     memoCont.append(memoText, deleteBtn);
 
@@ -36,16 +36,16 @@ function loadMemo() {
 }
 
 const renderMemo = () => {
-  const getText = $inpMemo.value;
+  let getText = $inpMemo.value;
+  getText = getText.replaceAll(/(?:\r\n|\r|\n)/g, "<br>");
 
   //DOM 생성
   const memoCont = document.createElement("div");
   const memoText = document.createElement("p");
   const deleteBtn = document.createElement("button");
   memoCont.classList.add("memo-cont");
-  // $memoWrap.append(memoCont);
   $memoWrap.insertBefore(memoCont, parent.firstChild);
-  memoText.textContent = getText;
+  memoText.innerHTML = getText;
   deleteBtn.classList.add("delete-btn");
   memoCont.append(memoText, deleteBtn);
 
@@ -68,7 +68,8 @@ const renderMemo = () => {
 
 // 새로운 메모를 추가하는 함수
 const addMemo = () => {
-  const getText = $inpMemo.value;
+  let getText = $inpMemo.value;
+  getText = getText.replaceAll(/(?:\r\n|\r|\n)/g, "<br>");
 
   // 입력 값이 유효하지 않을 경우
   if (!getText) {
@@ -88,13 +89,9 @@ const addMemo = () => {
 
 const removeMemo = (event) => {
   let memoList = Array.from(JSON.parse(localStorage.getItem("my-memo")));
-  console.log(memoList);
-  console.log(event.target.parentNode);
-  console.log(event.target.parentNode.children[0]);
-  console.log(event.target.parentNode.children[0].textContent);
 
   memoList.forEach((memo) => {
-    if (memo.memo === event.target.parentNode.children[0].textContent) {
+    if (memo.memo === event.target.parentNode.children[0].innerHTML) {
       // 메모 삭제
       memoList.splice(memoList.indexOf(memo), 1);
     }
