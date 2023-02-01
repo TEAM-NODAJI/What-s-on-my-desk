@@ -28,7 +28,8 @@ button {
   font-family: var(--font);
 }
 
-h1 {
+h1,
+h2 {
   font-size: initial;
   margin: 0;
   padding: 0;
