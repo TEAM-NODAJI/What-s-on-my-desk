@@ -3,9 +3,17 @@ body {
   height: 100vh;
   background-color: blanchedalmond;
 }
-
-::-webkit-scrollbar {
-  display: none;
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: tan;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .form-memo {
@@ -93,17 +101,31 @@ body {
   height: 60px;
   position: absolute;
   top: -30px;
-  left: 90px;
+  left: 70px;
   transform: rotate(85deg);
   background-color: rgba(255, 189, 67, 0.4);
   backdrop-filter: blur(0.5px);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .memo-cont p {
-  width: inherit;
-  height: inherit;
-  overflow: auto;
+  width: 110%;
+  height: 100%;
+  padding-right: 6px;
+  overflow-y: auto;
 }
+.memo-cont p::-webkit-scrollbar {
+  width: 7px;
+}
+.memo-cont p::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(255, 190, 0, 0.7);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.memo-cont p::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .short-memo {
   font-size: 25px;
   text-align: center;
@@ -111,12 +133,12 @@ body {
 .regular-memo {
   font-size: 16px;
   line-height: 1.25;
+  letter-spacing: -0.5px;
 }
 .long-memo {
   font-size: 14px;
   text-align: justify;
   word-break: break-all;
-  border-bottom: 1px solid rgba(255, 190, 0, 0.5);
 }
 
 /* 삭제 버튼 */
