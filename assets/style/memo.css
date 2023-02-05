@@ -1,19 +1,56 @@
-body {
+.memo-modal-wrap {
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: blanchedalmond;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3.5px);
+  z-index: 40;
 }
-body::-webkit-scrollbar {
+
+.memo-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 95%;
+  height: 89%;
+  z-index: 50;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: blanchedalmond;
+  overflow: hidden;
+}
+
+.memo-modal .memo-scroll {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  padding-bottom: 60px;
+  overflow-y: auto;
+}
+.memo-scroll::-webkit-scrollbar {
   width: 7px;
 }
-body::-webkit-scrollbar-thumb {
-  border-radius: 3px;
+.memo-scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
   background-color: tan;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
-body::-webkit-scrollbar-track {
+.memo-scroll::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+.memo-modal-wrap .off-modal {
+  width: 15px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+.memo-modal-wrap .off-modal img {
+  width: 100%;
 }
 
 .form-memo {
@@ -24,12 +61,12 @@ body::-webkit-scrollbar-track {
   gap: 14px;
 }
 
-.title {
+.form-memo .title {
   flex-shrink: 0;
   font-size: 25px;
   padding-right: 50px;
 }
-.title::after {
+.form-memo .title::after {
   content: "";
   display: block;
   margin-top: 5px;
@@ -37,7 +74,7 @@ body::-webkit-scrollbar-track {
   background-color: tan;
 }
 
-.inp-memo {
+#txtMemo {
   flex-shrink: 0;
   width: 160px;
   height: 160px;
@@ -49,11 +86,11 @@ body::-webkit-scrollbar-track {
   background-color: white;
   box-shadow: 0 0 3px rgba(32, 24, 18, 0.3);
 }
-.inp-memo:focus {
+#txtMemo:focus {
   background-color: rgb(255, 218, 97);
 }
 
-.btn-memo {
+.form-memo .btn-memo-post {
   align-self: flex-end;
   flex-shrink: 0;
   width: 70px;
@@ -64,13 +101,12 @@ body::-webkit-scrollbar-track {
   color: white;
   background-color: black;
   box-shadow: 0 0 5px rgba(32, 24, 18, 0.6);
-  backdrop-filter: blur(1.5px);
 }
-.btn-memo:hover {
+.form-memo .btn-memo-post:hover {
   color: rgb(255, 218, 97);
 }
 
-.wrap {
+.memo-modal .wrap {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -80,7 +116,7 @@ body::-webkit-scrollbar-track {
   min-width: 496px;
   min-height: 500px;
   padding: 50px 40px 40px;
-  margin: 40px auto;
+  margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 0 5px rgba(32, 24, 18, 0.6);
   background-color: tan;
@@ -108,9 +144,8 @@ body::-webkit-scrollbar-track {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .memo-cont p {
-  width: 110%;
+  width: 100%;
   height: 100%;
-  padding-right: 6px;
   overflow-y: auto;
 }
 .memo-cont p::-webkit-scrollbar {
@@ -126,31 +161,37 @@ body::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-.short-memo {
+/* 메모 길이에 따른 스타일 */
+.memo-cont .short-memo {
   font-size: 25px;
   text-align: center;
 }
-.regular-memo {
+.memo-cont .regular-memo,
+.memo-cont .long-memo {
+  width: 110%;
+  padding-right: 6px;
+}
+.memo-cont .regular-memo {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.5px;
 }
-.long-memo {
+.memo-cont .long-memo {
   font-size: 14px;
   text-align: justify;
   word-break: break-all;
 }
 
-/* 삭제 버튼 */
-.delete-btn {
+/* 메모 삭제 버튼 */
+.memo-delete-btn {
   position: absolute;
   top: 7px;
   right: 8px;
   width: 10px;
   height: 10px;
-  background: url(../assets/images/off_icon.png) no-repeat center/cover;
+  background: url(../images/off_icon.png) no-repeat center/cover;
   opacity: 0;
 }
-.memo-cont:hover .delete-btn {
+.memo-cont:hover .memo-delete-btn {
   opacity: 100;
 }

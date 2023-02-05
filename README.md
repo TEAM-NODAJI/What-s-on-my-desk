@@ -13,6 +13,8 @@
 
 :card_file_box:[add]
 <br>
+:hammer: [chore] - 간단한 작업
+<br>
 
 ### 기능 추가
 

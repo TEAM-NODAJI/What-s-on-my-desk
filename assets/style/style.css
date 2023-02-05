@@ -1,7 +1,8 @@
 @import "./globalStyle.css";
-@import "./whatFoodStyle.css";
+@import "./whatFood.css";
 @import "./coffee.css";
 @import "./calculator.css";
+@import "./memo.css";
 
 /* main layout */
 body {
@@ -9,6 +10,9 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #e8f7fb;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -116,8 +120,8 @@ body {
 .btn-memo {
   width: 350px;
   position: absolute;
-  right: 35px;
-  top: 210px;
+  right: 25px;
+  top: 204px;
   z-index: 20;
 }
 .btn-memo img {
