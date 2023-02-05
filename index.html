@@ -71,9 +71,9 @@
       <!-- // 오늘뭐먹지? -->
 
       <!-- 메모지 -->
-      <a class="btn-memo" href="./memo/memo.html">
+      <button class="btn-memo" type="button">
         <img src="./assets/images/memoPen.png" alt="메모지와 펜" />
-      </a>
+      </button>
       <!-- // 메모지 -->
 
       <img class="img-glasses" src="./assets/images/glasses.png" alt="" />
@@ -121,7 +121,7 @@
     </div>
     <!-- // Modal 커피 메뉴판 -->
 
-    <!-- 계산기 모달 -->
+    <!-- Modal 계산기 -->
     <div class="calculator-wrap hidden">
       <section class="calculator">
         <!-- <label for="screenCalc"></label>
@@ -156,7 +156,35 @@
         </div>
       </section>
     </div>
-    <!-- // 계산기 모달 -->
+    <!-- // Modal 계산기 -->
+
+    <!-- Modal 메모장 -->
+    <div class="memo-modal-wrap hidden">
+      <button type="button" class="off-modal">
+        <img src="./assets/images/off_icon.png" alt="모달끄기" />
+      </button>
+      <section class="memo-modal">
+        <h2 class="sr-only">간단한 메모장 기능</h2>
+        <div class="memo-scroll">
+          <form class="form-memo">
+            <h2 class="title">무엇을 기록하시나요 ?</h2>
+            <textarea
+              name="memo"
+              id="txtMemo"
+              cols="20"
+              rows="5"
+              maxlength="300"
+              minlength="1"
+              placeholder="메모 입력하기"
+              autofocus
+            ></textarea>
+            <button class="btn-memo-post" type="button">Post it</button>
+          </form>
+          <main class="wrap"></main>
+        </div>
+      </section>
+    </div>
+    <!-- // Modal 메모장 -->
 
     <script src="apikey.js"></script>
     <script src="./assets/script/weather.js"></script>
@@ -164,5 +192,6 @@
     <script src="./assets/script/calculator.js"></script>
     <script src="./assets/script/whatFood.js"></script>
     <script src="./assets/script/coffee.js"></script>
+    <script src="./assets/script/memo.js"></script>
   </body>
 </html>
