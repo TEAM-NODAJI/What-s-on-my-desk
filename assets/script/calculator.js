@@ -1,9 +1,3 @@
-// 1. 계산기 뼈대 만들기
-// 2. 계산기 꾸미기
-// 3. 버튼 클릭 시 화면에 텍스트 추가
-// 4. AC 기능 구현
-// 5. 계산 기능 구현 (=버튼)
-// 6. 예외 처리
 const openCalcModal = document.querySelector(".btn-calc");
 const calcModal = document.querySelector(".calculator-wrap");
 
@@ -47,7 +41,7 @@ pointBtn.addEventListener("click", addPoint);
 equalsBtn.addEventListener("click", evaluate);
 
 function insertNum(number) {
-  if (currentScreen.textContent === '0' || isResetScreen) {
+  if (currentScreen.textContent === "0" || isResetScreen) {
     resetScreen();
   }
   currentScreen.textContent += number;
@@ -55,11 +49,10 @@ function insertNum(number) {
 
 function clear() {
   currentScreen.textContent = "0";
-  lastScreen.textContent = "0";
+  lastScreen.textContent = "";
   firstAppendNum = "";
   secondAppendNum = "";
   currentOper = null;
-  isResetScreen = false;
 }
 
 function deleteNum() {
@@ -71,6 +64,10 @@ function deleteNum() {
 }
 
 function addPoint() {
+  if (isResetScreen) resetScreen();
+  if (currentScreen.textContent === "") {
+    currentScreen.textContent = "0";
+  }
   if (currentScreen.textContent.includes(".")) return;
   currentScreen.textContent += ".";
 }
@@ -124,7 +121,7 @@ function operate(a, operator, b) {
       return plus(a, b);
     case "-":
       return minus(a, b);
-    case "x":
+    case "×":
       return multiply(a, b);
     case "÷":
       if (b === 0) {
