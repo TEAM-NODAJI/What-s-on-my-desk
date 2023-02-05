@@ -51,6 +51,7 @@
 
 .screen-last {
   margin-bottom: 1rem;
+  min-height: 32px;
   font-size: 1.2rem;
   color: #b1b1b1;
   width: 100%;
