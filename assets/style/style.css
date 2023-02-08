@@ -238,6 +238,14 @@ body::-webkit-scrollbar {
   }
 
   .cont-weather {
-    top: 60px;
+    top: 0;
+    width: 240px;
+    height: 325px;
+  }
+  .cont-weather-position {
+    top: 75px;
+  }
+  .cont-temp .temp {
+    font-size: 50px;
   }
 }
