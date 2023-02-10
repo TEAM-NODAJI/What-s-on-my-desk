@@ -46,7 +46,7 @@ function render(data) {
   titCity.textContent = `${city} / ${country}`;
   weatherIcon.innerHTML = `<img src="${icon_url}" alt="">`;
   weatherCondition.textContent = mainWeather;
-  weatherTemp.innerHTML = `${parseInt(temp - 273.15)}&#176;`;
+   weatherTemp.innerHTML = `${parseInt(temp - 273.15)}`;
   tempMaxCont.innerHTML = `최대 : ${parseInt(tempMax - 273.15)}&#176;`;
   tempMinCont.innerHTML = `최저 : ${parseInt(tempMin - 273.15)}&#176;`;
 }
