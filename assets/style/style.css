@@ -35,10 +35,10 @@ body::-webkit-scrollbar {
 }
 
 .cont-tablet .tit-womd {
-  width: 256px;
+  width: 170px;
   position: absolute;
-  top: 200px;
-  left: 350px;
+  top: 170px;
+  left: 390px;
 }
 
 .cont-tablet .tit-womd img {
