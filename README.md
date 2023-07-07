@@ -7,6 +7,9 @@
 
 <br>
 
+<img width="600" alt="" src="https://github.com/TEAM-NODAJI/What-s-on-my-desk/assets/112460344/531321ef-50fb-42aa-9580-3946b6edc2b6">
+
+
 ## :handshake: 커밋 컨벤션
 
 ### 파일 추가
